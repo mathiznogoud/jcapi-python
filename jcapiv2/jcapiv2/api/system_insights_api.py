@@ -4337,7 +4337,7 @@ class SystemInsightsApi(object):
                 params['accept'] is None):
             raise ValueError("Missing the required parameter `accept` when calling `systeminsights_list_system_info`")  # noqa: E501
 
-        if 'limit' in params and params['limit'] > 100:  # noqa: E501
+        if 'limit' in params and params['limit'] > 10000:  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `systeminsights_list_system_info`, must be a value less than or equal to `100`")  # noqa: E501
         if 'limit' in params and params['limit'] < 0:  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `systeminsights_list_system_info`, must be a value greater than or equal to `0`")  # noqa: E501
